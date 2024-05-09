@@ -2,7 +2,7 @@ pipeline {
     agent any 
     
     tools{
-        jdk 'jdk11'
+        jdk 'jdk17'
         maven 'maven3'
     }
     
@@ -14,7 +14,7 @@ pipeline {
         
         stage("Git Checkout"){
             steps{
-                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/jaiswaladi246/Petclinic.git'
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/pascarusilviu/Petclinic--new_project.git'
             }
         }
         
@@ -33,13 +33,16 @@ pipeline {
         stage("Sonarqube Analysis "){
             steps{
                 withSonarQubeEnv('sonar-server') {
-                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Petclinic \
+                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Petclinic--new_project \
                     -Dsonar.java.binaries=. \
-                    -Dsonar.projectKey=Petclinic '''
+                    -Dsonar.projectKey=Petclinic--new_project '''
     
                 }
             }
         }
+###########################################
+###for below command I installed zaproxy###
+###########################################
         
         stage("OWASP Dependency Check"){
             steps{
@@ -75,8 +78,9 @@ pipeline {
         
         stage("Deploy To Tomcat"){
             steps{
-                sh "cp  /var/lib/jenkins/workspace/CI-CD/target/petclinic.war /opt/apache-tomcat-9.0.65/webapps/ "
+                sh "cp  /home/anonim/Petclinic--new_project/target/petclinic/resources/css/petclinic.css etc/tomcat10/"
+
             }
         }
     }
-}
+} 

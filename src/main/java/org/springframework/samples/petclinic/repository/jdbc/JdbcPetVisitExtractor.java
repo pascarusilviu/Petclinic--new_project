@@ -15,11 +15,11 @@
  */
 package org.springframework.samples.petclinic.repository.jdbc;
 
-import org.springframework.jdbc.core.ResultSetExtractor;
-import org.springframework.samples.petclinic.model.Visit;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import org.springframework.jdbc.core.ResultSetExtractor;
+import org.springframework.samples.petclinic.model.Visit;
 
 /**
  * {@link ResultSetExtractor} implementation by using the

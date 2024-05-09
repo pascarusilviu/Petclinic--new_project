@@ -1,4 +1,59 @@
 -------------------------------------------------------------------------------
 Test set: org.springframework.samples.petclinic.service.ClinicServiceJdbcTests
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.071 s - in org.springframework.samples.petclinic.service.ClinicServiceJdbcTests
+Tests run: 11, Failures: 0, Errors: 11, Skipped: 0, Time elapsed: 1.395 s <<< FAILURE! - in org.springframework.samples.petclinic.service.ClinicServiceJdbcTests
+shouldFindVets  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 21 in XML document from class path resource [spring/business-config.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 137; The string "--" is not permitted within comments.
+Caused by: org.xml.sax.SAXParseException: The string "--" is not permitted within comments.
+
+shouldFindOwnersByLastName  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 21 in XML document from class path resource [spring/business-config.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 137; The string "--" is not permitted within comments.
+Caused by: org.xml.sax.SAXParseException: The string "--" is not permitted within comments.
+
+shouldAddNewVisitForPet  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 21 in XML document from class path resource [spring/business-config.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 137; The string "--" is not permitted within comments.
+Caused by: org.xml.sax.SAXParseException: The string "--" is not permitted within comments.
+
+shouldUpdateOwner  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 21 in XML document from class path resource [spring/business-config.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 137; The string "--" is not permitted within comments.
+Caused by: org.xml.sax.SAXParseException: The string "--" is not permitted within comments.
+
+shouldFindVisitsByPetId  Time elapsed: 0.026 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 21 in XML document from class path resource [spring/business-config.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 137; The string "--" is not permitted within comments.
+Caused by: org.xml.sax.SAXParseException: The string "--" is not permitted within comments.
+
+shouldInsertPetIntoDatabaseAndGenerateId  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 21 in XML document from class path resource [spring/business-config.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 137; The string "--" is not permitted within comments.
+Caused by: org.xml.sax.SAXParseException: The string "--" is not permitted within comments.
+
+shouldInsertOwner  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 21 in XML document from class path resource [spring/business-config.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 137; The string "--" is not permitted within comments.
+Caused by: org.xml.sax.SAXParseException: The string "--" is not permitted within comments.
+
+shouldFindSingleOwnerWithPet  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 21 in XML document from class path resource [spring/business-config.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 137; The string "--" is not permitted within comments.
+Caused by: org.xml.sax.SAXParseException: The string "--" is not permitted within comments.
+
+shouldUpdatePetName  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 21 in XML document from class path resource [spring/business-config.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 137; The string "--" is not permitted within comments.
+Caused by: org.xml.sax.SAXParseException: The string "--" is not permitted within comments.
+
+shouldFindAllPetTypes  Time elapsed: 0.033 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 21 in XML document from class path resource [spring/business-config.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 137; The string "--" is not permitted within comments.
+Caused by: org.xml.sax.SAXParseException: The string "--" is not permitted within comments.
+
+shouldFindPetWithCorrectId  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 21 in XML document from class path resource [spring/business-config.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 137; The string "--" is not permitted within comments.
+Caused by: org.xml.sax.SAXParseException: The string "--" is not permitted within comments.
+
