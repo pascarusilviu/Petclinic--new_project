@@ -551,6 +551,11 @@
             <name>Spring Milestone Repository</name>
             <url>https://repo.spring.io/milestone</url>
         </repository>
+	<repository>
+	    <id>mvnrepository.com</id>
+	    <name>mvnrepo</name>
+	    <url>https://mvnrepository.com/artifact</url>
+	</repository>
     </repositories>
 
 </project>
