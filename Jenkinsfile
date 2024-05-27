@@ -40,9 +40,11 @@ pipeline {
                 }
             }
         }
+/*  
 ###########################################
 ###for below command I installed zaproxy###
 ###########################################
+*/
         
         stage("OWASP Dependency Check"){
             steps{
