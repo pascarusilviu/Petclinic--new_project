@@ -14,7 +14,7 @@
     <properties>
 
         <!-- Generic properties -->
-        <java.version>17</java.version>  ###added version 17, not 1.8
+	    <java.version>17</java.version> <!--  ###added version 17, not 1.8 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>${java.version}</maven.compiler.source>
@@ -33,7 +33,7 @@
         <wro4j.version>1.8.0</wro4j.version> <!-- wro4j 1.0.0 requires Java 9 -->
 
         <!-- Java EE / Java SE dependencies -->
-        <tomcat.version>10</tomcat.version>  #####modified tomcat version
+	<tomcat.version>10</tomcat.version> <!--  #####modified tomcat version -->
         <jaxb-api.version>2.3.1</jaxb-api.version>
         <jaxb-runtime.version>2.3.4</jaxb-runtime.version>
         <javax-activation.version>1.2.0</javax-activation.version>
@@ -530,9 +530,9 @@
                 <db.script>postgresql</db.script>
                 <jpa.database>POSTGRESQL</jpa.database>
                 <jdbc.driverClassName>org.postgresql.Driver</jdbc.driverClassName>
-                <jdbc.url>jdbc:postgresql://localhost:5432/petclinic</jdbc.url> ###created database "petclinic"
-                <jdbc.username>postgres</jdbc.username> ### created username anonim, will replace user "postgres"
-		<jdbc.password>petclinic</jdbc.password> ####password petclinic or <petclinic>
+		<jdbc.url>jdbc:postgresql://localhost:5432/petclinic</jdbc.url> <!--  ###created database "petclinic" -->
+		<jdbc.username>postgres</jdbc.username> <!--  ### created username anonim, will replace user "postgres" -->
+		<jdbc.password>petclinic</jdbc.password> <!--  ####password petclinic or <petclinic> -->
             </properties>
             <dependencies>
                 <dependency>
