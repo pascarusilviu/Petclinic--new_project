@@ -287,7 +287,12 @@
             <groupId>javax.activation</groupId>
             <artifactId>javax.activation-api</artifactId>
             <version>${javax-activation.version}</version>
-        </dependency>
+    </dependency>
+	<dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>javax.servlet-api</artifactId>
+          <version>3.0.1</version>
+    </dependency>
 
     </dependencies>
 
