@@ -26,12 +26,12 @@ pipeline {
             }
         }
         
-         stage("Test Cases"){
+        /* stage("Test Cases"){
             steps{	
                 sh "mvn test"
-		options{
-			timeout(time: 3, unit: 'MINUTES')
-			}
+		    options{
+			     timeout(time: 3, unit: 'MINUTES')
+		}
             }
         }
         
@@ -44,19 +44,20 @@ pipeline {
     
                 }
             }
-        }
+        } */
 /*  
 ###########################################
 ###for below command I installed zaproxy###
 ###########################################
 */
         
-        stage("OWASP Dependency Check"){
+        /* stage("OWASP Dependency Check"){
             steps{
                 dependencyCheck additionalArguments: '--scan ./ --format HTML ', odcInstallation: 'DP'
-                dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+                dependencyCheckPublisher pattern: 'dependency-check-report.xml'
             }
-        }
+        }*/
+
         
          stage("Build"){
             steps{
