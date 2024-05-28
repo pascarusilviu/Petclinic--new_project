@@ -27,8 +27,11 @@ pipeline {
         }
         
          stage("Test Cases"){
-            steps{
+            steps{	
                 sh "mvn test"
+		options{
+			timeout(time: 3, unit: 'MINUTES')
+			}
             }
         }
         
