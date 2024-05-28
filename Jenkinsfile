@@ -85,7 +85,7 @@ pipeline {
         
         stage("Deploy To Tomcat"){
             steps{
-                sh "cp  /home/anonim/Petclinic--new_project/target/petclinic/resources/css/petclinic.css etc/tomcat10/"
+                sh "cp  /home/anonim/temp_repo/Petclinic--new_project/target/petclinic/resources/css/petclinic.css etc/tomcat10/"
 
             }
         }
