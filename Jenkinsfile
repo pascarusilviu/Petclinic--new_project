@@ -37,7 +37,7 @@ pipeline {
         
 	*/	
 
-        stage("Sonarqube Analysis "){
+   /*     stage("Sonarqube Analysis "){
             steps{
                 withSonarQubeEnv('sonar-server') {
                     sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Petclinic--new_project \
@@ -47,6 +47,9 @@ pipeline {
                 }
             }
         } 
+	*/
+
+
 /*  
 ###########################################
 ###for below command I installed zaproxy###
