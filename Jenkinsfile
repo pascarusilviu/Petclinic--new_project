@@ -26,7 +26,7 @@ pipeline {
             }
         }
         
-  /*       stage("Test Cases"){
+        stage("Test Cases"){
             steps{	
                 sh "mvn test"
 		    options{
@@ -35,7 +35,7 @@ pipeline {
             }
         }
         
-	*/	
+
 
    /*     stage("Sonarqube Analysis "){
             steps{
