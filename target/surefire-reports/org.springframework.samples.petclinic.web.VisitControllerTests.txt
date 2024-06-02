@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.springframework.samples.petclinic.web.VisitControllerTests
--------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.058 s <<< FAILURE! - in org.springframework.samples.petclinic.web.VisitControllerTests
-testProcessNewVisitFormHasErrors  Time elapsed: 0.021 s  <<< FAILURE!
-java.lang.AssertionError: No errors for attribute 'visit'
-	at org.springframework.samples.petclinic.web.VisitControllerTests.testProcessNewVisitFormHasErrors(VisitControllerTests.java:66)
-
