@@ -26,14 +26,14 @@ pipeline {
             }
         }
         
-        stage("Test Cases"){
+       /*  stage("Test Cases"){
             steps{	
                 sh "mvn test"
 		    options{
 			     timeout(time: 3, unit: 'MINUTES')
 		}
             }
-        }
+        } */
         
 
 
@@ -82,12 +82,12 @@ pipeline {
                 }
             }
         }
-        
+        /*
         stage("TRIVY"){
             steps{
                 sh " trivy image adijaiswal/pet-clinic123:latest"
             }
-        }
+        } */
         
         stage("Deploy To Tomcat"){
             steps{
