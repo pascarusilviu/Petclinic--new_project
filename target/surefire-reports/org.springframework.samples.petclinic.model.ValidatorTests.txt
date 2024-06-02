@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: org.springframework.samples.petclinic.model.ValidatorTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.049 s <<< FAILURE! - in org.springframework.samples.petclinic.model.ValidatorTests
-shouldNotValidateWhenFirstNameEmpty  Time elapsed: 2.004 s  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.324 s <<< FAILURE! - in org.springframework.samples.petclinic.model.ValidatorTests
+shouldNotValidateWhenFirstNameEmpty  Time elapsed: 0.318 s  <<< ERROR!
 javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
 	at org.springframework.samples.petclinic.model.ValidatorTests.createValidator(ValidatorTests.java:24)
 	at org.springframework.samples.petclinic.model.ValidatorTests.shouldNotValidateWhenFirstNameEmpty(ValidatorTests.java:36)
