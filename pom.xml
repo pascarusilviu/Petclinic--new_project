@@ -314,9 +314,9 @@
             <testResource>
                 <directory>${project.basedir}/src/test/resources</directory>
             </testResource>
-        </testResources>
-        <plugins>
-            
+	</testResources>
+       
+	<plugins>            
 		<plugin>
   		<groupId>org.apache.maven.plugins</groupId>
 		  <artifactId>maven-compiler-plugin</artifactId>
@@ -391,7 +391,7 @@
                 </configuration>
             </plugin>
 	   
-	    <plugins>
+	    
     <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
