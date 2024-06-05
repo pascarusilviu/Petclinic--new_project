@@ -16,7 +16,7 @@ pipeline {
         
         stage("Git Checkout"){
             steps{
-                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/pascarusilviu/Petclinic--new_project.git'
+                git branch: 'app_test', changelog: false, poll: false, url: 'https://github.com/pascarusilviu/Petclinic--new_project.git'
             }
         }
         
