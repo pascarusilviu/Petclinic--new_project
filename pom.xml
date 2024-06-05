@@ -75,8 +75,10 @@
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
         <maven-war-plugin.version>3.3.1</maven-war-plugin.version>
         <jacoco-maven-plugin>0.8.6</jacoco-maven-plugin>
+	 <groovy-maven-plugin.version>2.0</groovy-maven-plugin.version>
+       
 
-        <!-- Docker image -->
+	<!-- Docker image -->
         <docker.jib-maven-plugin.version>2.6.0</docker.jib-maven-plugin.version>
         <docker.image.prefix>springcommunity</docker.image.prefix>
 
@@ -332,6 +334,36 @@
 	    </compilerArgs>
 	  </configuration>
   </plugin>
+
+
+	<plugin>
+    <groupId>org.codehaus.groovy.maven</groupId>
+    <artifactId>gmaven-plugin</artifactId>
+    <version>2.0</version>
+    <executions>
+        <execution>
+            <id>set-custom-arg-line</id>
+            <phase>validate</phase>
+            <goals>
+                <goal>execute</goal>
+            </goals>
+            <configuration>
+                <source>
+                    def argLine = project.properties['argLine'];
+                    if (argLine == null) {
+                        argLine = "";
+                    }
+                    project.properties.argLine = argLine;
+                </source>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+
+
+
+
+
 
 
            <plugin>
