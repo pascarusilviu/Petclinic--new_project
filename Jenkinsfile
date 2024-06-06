@@ -98,7 +98,7 @@ pipeline {
 		stage("Docker Build & Push"){
             steps{
                 script{
-                   withDockerRegistry(credentialId: 'af6d220a-451a-4f0d-89dd-edfa88a5443b', toolName: 'docker', url: 'https://hub.docker.com/repository/docker/pascarusilviu/pet-clinic123/general') {
+                   withDockerRegistry(credentialsId: 'af6d220a-451a-4f0d-89dd-edfa88a5443b', toolName: 'docker', url: 'https://hub.docker.com/repository/docker/pascarusilviu/pet-clinic123/general') {
 
                         sh "docker build -t image1 ."
                         sh "docker tag image1 pascarusilviu/pet-clinic123 "
