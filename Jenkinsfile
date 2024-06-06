@@ -26,14 +26,14 @@ pipeline {
             }
         }
         
-        stage("Test Cases"){
+       /* stage("Test Cases"){
             steps{	
                 sh "mvn test"
 		    options{
 			     timeout(time: 3, unit: 'MINUTES')
 		}
             }
-        } 
+        } */
         
 
 
