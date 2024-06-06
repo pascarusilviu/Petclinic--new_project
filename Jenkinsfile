@@ -12,6 +12,8 @@ pipeline {
 
 */
     
+	
+	
     stages{
         
         stage("Git Checkout"){
@@ -20,11 +22,17 @@ pipeline {
             }
         }
         
+		
+		
+		
         stage("Compile"){
             steps{
                 sh "mvn clean compile"
             }
         }
+		
+		
+		
         
        /* stage("Test Cases"){
             steps{
@@ -35,6 +43,8 @@ pipeline {
             }
         } */
         
+
+
 
 
    /*     stage("Sonarqube Analysis "){
@@ -51,6 +61,8 @@ pipeline {
 
 
 
+
+
         stage("Docker Build"){
             steps{
                 script{                   
@@ -58,17 +70,17 @@ pipeline {
                         sh "docker build -t image1 ."
                         sh "docker tag image1 pascarusilviu/pet-clinic123 "
                      }   
-                                                }
-                }
+                  }
+               }
             
         
 
 
                  stage("Docker Push"){         
-            steps{
-                script {
-                    docker.withRegistry( '', dockerhub ) {
-                    dockerImage.push()
+					steps{
+						script {
+						docker.withRegistry( '', dockerhub ) {
+							dockerImage.push()
                     }
                 }
             }
@@ -90,12 +102,20 @@ pipeline {
                 dependencyCheckPublisher pattern: 'dependency-check-report.xml'
             }
         }*/
+		
+		
+		
+		
+		
 
-        stage("TRIVY"){
+        /* stage("TRIVY"){
             steps{
                 sh " trivy image adijaiswal/pet-clinic123:latest"
             }
         } */
+		
+		
+		
         
         stage("Deploy To Tomcat"){
             steps{
