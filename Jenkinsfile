@@ -73,7 +73,7 @@ pipeline {
         stage("Docker Build & Push"){
             steps{
                 script{
-                   withDockerRegistry(credentialsId: 'Timpul@123', toolName: 'docker', url: 'https://hub.docker.com/repository/docker/pascarusilviu/pet-clinic123/general') {
+                   withDockerRegistry(registryCrdential, toolName: 'docker', url: 'https://hub.docker.com/repository/docker/pascarusilviu/pet-clinic123/general') {
                         
                         sh "docker build -t image1 ."
                         sh "docker tag image1 pascarusilviu/pet-clinic123 "
