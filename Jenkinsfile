@@ -57,7 +57,7 @@ pipeline {
 
                         sh "docker build -t image1 ."
                         sh "docker tag image1 pascarusilviu/pet-clinic123 "
-                        
+                     }   
 						}
                 }
             }
