@@ -92,33 +92,29 @@ pipeline {
             }
         }
 
-		stage("Docker Build"){
+
+
+
+		stage("Docker Build & Push"){
             steps{
-                script{                   
+                script{
+                   withDockerRegistry(toolName: 'docker', url: 'https://hub.docker.com/repository/docker/pascarusilviu/pet-clinic123/general') {
 
                         sh "docker build -t image1 ."
                         sh "docker tag image1 pascarusilviu/pet-clinic123 "
-                     }   
-                  }
-               }
-            
-        
-
-
-                 stage("Docker Push"){         
-					steps{
-						script {
-						docker.withRegistry( '', dockerhub ) {
-							dockerImage.push()
+                        sh "docker push pascarusilviu/pet-clinic123 "
                     }
                 }
             }
         }
-
-
 		
 
                         	
+
+
+
+
+
 
 
 
