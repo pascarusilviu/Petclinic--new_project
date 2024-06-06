@@ -27,11 +27,11 @@ pipeline {
         }
         
        /* stage("Test Cases"){
-            steps{	
+            steps{
                 sh "mvn test"
-		    options{
-			     timeout(time: 3, unit: 'MINUTES')
-		}
+                    options{
+                             timeout(time: 3, unit: 'MINUTES')
+                }
             }
         } */
         
@@ -47,24 +47,24 @@ pipeline {
                 }
             }
         } 
-	*/
+        */
 
 
 
-	stage("Docker Build"){
+        stage("Docker Build"){
             steps{
                 script{                   
 
                         sh "docker build -t image1 ."
                         sh "docker tag image1 pascarusilviu/pet-clinic123 "
                      }   
-						}
+                                                }
                 }
-            }
+            
         
-		
-		
-		 stage("Docker Push"){         
+
+
+                 stage("Docker Push"){         
             steps{
                 script {
                     docker.withRegistry( '', dockerhub ) {
@@ -104,4 +104,5 @@ pipeline {
             }
         }
     }
-} 
+}
+
