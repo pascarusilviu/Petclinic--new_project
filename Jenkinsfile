@@ -96,30 +96,22 @@ pipeline {
 
 
 
-
-
-		 stage("Docker Build"){
+		stage("Docker Build & Push"){
             steps{
-                script{                   
+                script{
+                   withDockerRegistry(credentialsId: 'dockerHub', toolName: 'docker') {
 
                         sh "docker build -t image1 ."
                         sh "docker tag image1 pascarusilviu/pet-clinic123 "
-                    
-			}
-                }
-            }
-        
-		
-		
-		 stage("Docker Push"){         
-            steps{
-                script {
-                    docker.withRegistry( '', registryCredential ) {
-                    dockerImage.push()
+                        sh "docker push pascarusilviu/pet-clinic123 "
                     }
                 }
             }
         }
+		
+
+
+
 
                         	
 
