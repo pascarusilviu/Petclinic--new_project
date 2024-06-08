@@ -141,7 +141,7 @@ pipeline {
         
         stage("Deploy To Tomcat"){
             steps{
-                sh "cp /var/lib/jenkins/workspace/Petclinic_last_test_app_test/target/petclinic.war or /home/ubuntu/my_github_repo/Petclinic--new_project/target/petclinic/resources/css/petclinic.css /opt/tomcat/webapps"
+                sh "cp /var/lib/jenkins/workspace/Petclinic_last_test_app_test/target/petclinic.war /opt/tomcat/webapps"
 
             }
         }
