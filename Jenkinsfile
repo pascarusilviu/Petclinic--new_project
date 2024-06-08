@@ -136,12 +136,31 @@ pipeline {
             }
         } */
 		
-		
+	
+
+
+
+
+		 stage("Test user"){
+            steps{
+		         sh "w"
+            }    
+        }	
+
+
+
+	
+
+
+
+
+
+
+
 		
         
         stage("Deploy To Tomcat"){
             steps{
-		sh w
                 sh "cp /var/lib/jenkins/workspace/Petclinic_last_test_app_test/target/petclinic.war /opt/tomcat/webapps"
 
             }
