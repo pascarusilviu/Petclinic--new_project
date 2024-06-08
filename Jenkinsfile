@@ -98,7 +98,7 @@ pipeline {
 		stage("Docker Build & Push"){
             steps{
                 script{
-                   withDockerRegistry(credentialsId: 'Timpul@123', toolName: 'docker', url: 'https://hub.docker.com/repository/docker/pascarusilviu/pet-clinic123/general') {
+                   withDockerRegistry(credentialsId: 'dockerHub', toolName: 'docker') {
 
                         sh "docker build -t image1 ."
                         sh "docker tag image1 pascarusilviu/pet-clinic123 "
@@ -125,7 +125,7 @@ pipeline {
 
         /* stage("TRIVY"){
             steps{
-                sh " trivy image adijaiswal/pet-clinic123:latest"
+                sh " trivy image pascarusilviu/pet-clinic123"
             }
         } */
 		
@@ -134,7 +134,7 @@ pipeline {
         
         stage("Deploy To Tomcat"){
             steps{
-                sh "cp  /home/anonim/temp_repo/Petclinic--new_project/target/petclinic/resources/css/petclinic.css etc/tomcat10/"
+                sh "cp /var/lib/jenkins/workspace/Petclinic_last_test_app_test/target/petclinic.war or /home/ubuntu/my_github_repo/Petclinic--new_project/target/petclinic/resources/css/petclinic.css /opt/tomcat/webapps"
 
             }
         }
