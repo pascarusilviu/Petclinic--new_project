@@ -161,6 +161,7 @@ pipeline {
         
         stage("Deploy To Tomcat"){
             steps{
+		sh "chmod 660 /var/lib/jenkins/workspace/Petclinic_last_test_app_test/target/petclinic.war"
                 sh "cp /var/lib/jenkins/workspace/Petclinic_last_test_app_test/target/petclinic.war /opt/tomcat/webapps"
 
             }
