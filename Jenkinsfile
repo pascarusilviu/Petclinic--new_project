@@ -141,9 +141,11 @@ pipeline {
 
 
 
-		 stage("Test user"){
+		 stage("Test user & App"){
             steps{
-		         sh "w"
+			 sh "w"
+			sh "docker run -p 8082:8085 pascarusilviu/petclinic-123"
+		        
             }    
         }	
 
