@@ -96,13 +96,23 @@ pipeline {
 
 
 
+	  stage("Give Docker permission"){
+            steps{
+	         sh "sudo chmod 777 /var/run/docker.sock"
+            }
+        }
+
+
+
+
+
+
 		stage("Docker Build & Push"){
             steps{
                 script{
                    withDockerRegistry(credentialsId: 'dockerHub', toolName: 'docker') {
 			
-			sh "sudo chmod 777 /var/run/docker.sock"
-                        sh "docker build -t image1 ."
+			sh "docker build -t image1 ."
                         sh "docker tag image1 pascarusilviu/pet-clinic123 "
                         sh "docker push pascarusilviu/pet-clinic123 "
                     }
