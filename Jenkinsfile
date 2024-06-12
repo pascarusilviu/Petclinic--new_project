@@ -100,7 +100,8 @@ pipeline {
             steps{
                 script{
                    withDockerRegistry(credentialsId: 'dockerHub', toolName: 'docker') {
-
+			
+			sh "sudo chmod 777 /var/run/docker.sock"
                         sh "docker build -t image1 ."
                         sh "docker tag image1 pascarusilviu/pet-clinic123 "
                         sh "docker push pascarusilviu/pet-clinic123 "
@@ -144,7 +145,7 @@ pipeline {
 		 stage("Test user & App"){
             steps{
 			 sh "w"
-		/*	sh "docker run -p 8082:8085 pascarusilviu/petclinic-123" */
+		/*	sh "docker run -p 8082:8088 pascarusilviu/petclinic-123" */
 		        
             }    
         }	
