@@ -96,11 +96,11 @@ pipeline {
 
 
 
-	  stage("Give Docker permission"){
+	 /*  stage("Give Docker permission"){
             steps{
 	         sh "sudo chmod 777 /var/run/docker.sock"
             }
-        }
+        }  */
 
 
 
