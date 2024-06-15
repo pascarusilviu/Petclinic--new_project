@@ -107,13 +107,13 @@
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-servlet-api</artifactId>
-            <version>10.0.10</version>
+            <version>10.1.24</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-jasper-el</artifactId>
-            <version>10.0.10</version>
+            <version>10.1.24</version>
             <scope>provided</scope>
         </dependency>
 
@@ -184,7 +184,7 @@
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-jdbc</artifactId>
-            <version>10.0.10</version>
+            <version>10.1.24</version>
             <scope>runtime</scope>
         </dependency>
 
